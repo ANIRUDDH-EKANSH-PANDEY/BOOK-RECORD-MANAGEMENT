@@ -1,0 +1,26 @@
+{
+  "name": "book-record-management",
+  "version": "1.0.0",
+  "description": "Library System",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "nodemon index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ANIRUDDH-EKANSH-PANDEY/BOOK-RECORD-MANAGEMENT.git"
+  },
+  "author": "Aniruddh",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ANIRUDDH-EKANSH-PANDEY/BOOK-RECORD-MANAGEMENT/issues"
+  },
+  "homepage": "https://github.com/ANIRUDDH-EKANSH-PANDEY/BOOK-RECORD-MANAGEMENT#readme",
+  "devDependencies": {
+    "nodemon": "^3.1.2"
+  },
+  "dependencies": {
+    "express": "^4.19.2"
+  }
+}
