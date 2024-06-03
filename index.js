@@ -1,6 +1,6 @@
 const express = require("express");
 const { users } = require("./data/users.json");
-// const {books} = require("./data/books.json");
+const { books } = require("./data/books.json");
 
 const app = express();
 
@@ -24,10 +24,27 @@ Parameters : None
 
 */
 
+/*
+
+Route : /books
+Method : GET
+Description : Get all books
+Access : Public
+Parameters : None
+
+*/
+
 app.get("/users", (req, res) => {
   res.status(200).json({
     success: true,
     data: users,
+  });
+});
+
+app.get("/books", (req, res) => {
+  res.status(200).json({
+    success: true,
+    data: books,
   });
 });
 
