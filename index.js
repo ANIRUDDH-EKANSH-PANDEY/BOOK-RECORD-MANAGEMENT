@@ -2,6 +2,9 @@ const express = require("express");
 const { users } = require("./data/users.json");
 const { books } = require("./data/books.json");
 
+const userRouter = require("./routes/users");
+const bookRouter = require("./routes/books");
+
 const app = express();
 
 const PORT = 8081;
@@ -14,39 +17,8 @@ app.get("/", (req, res) => {
   });
 });
 
-/*
-
-Route : /users
-Method : GET
-Description : Get all users
-Access : Public
-Parameters : None
-
-*/
-
-/*
-
-Route : /books
-Method : GET
-Description : Get all books
-Access : Public
-Parameters : None
-
-*/
-
-app.get("/users", (req, res) => {
-  res.status(200).json({
-    success: true,
-    data: users,
-  });
-});
-
-app.get("/books", (req, res) => {
-  res.status(200).json({
-    success: true,
-    data: books,
-  });
-});
+app.use("/users", userRouter);
+app.use("/books", bookRouter);
 
 app.get("*", (req, res) => {
   res.status(404).json({
