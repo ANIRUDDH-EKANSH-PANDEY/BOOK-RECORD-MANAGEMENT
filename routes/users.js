@@ -143,7 +143,10 @@ router.get("/subscription-details/:id", (req, res) => {
   const user = users.find((each) => each.id === id);
 
   if (!user)
-    return res.status(404).json({ success: false, message: "User not found" });
+    return res.status(404).json({
+      success: false,
+      message: "User not found",
+    });
 
   const getDateInDays = (data = "") => {
     let date;
@@ -189,7 +192,10 @@ router.get("/subscription-details/:id", (req, res) => {
           : 100
         : 0,
   };
-  return res.status(200).json({ success: true, data });
+  return res.status(200).json({
+    success: true,
+    data,
+  });
 });
 
 // deafult export
